@@ -1,0 +1,287 @@
+/* css reset */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* Navbar css */
+#navbar{
+    display:flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    box-shadow: 0px 5px 8px rgb(46, 46, 46);
+    z-index: 2;
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    background-image:  linear-gradient(to right, rgb(192, 35, 132) , rgb(58, 9, 236));
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+#logo{
+    margin: 12px 23px;
+    /* padding: 3px 4px; */
+}
+#logo img{
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease-in-out  ;
+}
+#logo img:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+#navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    /* flex-direction: column; */
+}
+#navbar ul li{
+    margin: 12px 14px;
+    font-size: 1.3rem;
+}
+#navbar ul li a{
+color: white;
+display: block;
+padding: 12px 13px;
+border-radius: 5px;
+text-decoration: none;
+}
+#navbar ul li a:hover{
+ color: black;
+ background-color: white;
+}
+#navbar .btn{
+position: absolute;
+right: 100px;
+top:15px;
+font-size: 1.3rem;
+color: white;
+background-color: rgb(32, 8, 121);
+padding: 12px 30px;
+border: 2px solid red;
+border-radius: 10px;
+}
+#navbar .btn:hover{
+color: black;
+background-color: white;
+cursor: pointer;
+}
+/* Home  */
+#home{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    padding: 0px 200px;
+}
+#home:before{
+    content: "";
+    background:rgba(0, 0, 0, 0.5) url("images/background4.jpg") no-repeat top center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    z-index: -2;
+    opacity: 0.8;
+}
+#home p{
+    text-align: center;
+    color: white;
+    font-size: larger;
+    /* z-index: -1; */
+}
+#home h1{
+    color: white;
+    font-size: 3.3rem;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 40px;
+    text-shadow:0px 2px 2px rgb(12, 12, 12);
+    /* margin-bottom:2rem ; */
+    /* position: absolute;
+    top:150px; */
+    /* z-index: -1; */
+}
+/* it is smart to male utility classes that we can use whenever :required */
+/* .h-primary{
+    text-shadow:0px 2px 2px rgb(248, 246, 246);
+    text-align:center;
+    margin-bottom: 2rem;
+} */
+
+/* Gallery */
+.gallery{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+}
+#gallery-container h1{
+    display: block;
+    width:50%;
+    margin:20px auto;
+    text-align: center;
+    font-size: 3.3rem;
+}
+/* #gallery-container{
+    position: relative;
+}
+#gallery-container::before{
+    content: "";
+    background: url("images/contact-us-background.jpg") no-repeat center center/cover;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+.gallery .box{
+    height: 70vh;
+    width: 20vw;
+    /* border: 2px solid red; */
+}
+.gallery .box p{
+    text-align: center;
+    font-size: 1.5rem;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(148, 16, 126);
+    box-sizing: border-box;
+    padding: 12px;
+}
+.gallery .box p:hover{
+    color: rgb(6, 1, 19);
+    cursor: pointer;
+}
+#gallery-container img:hover{
+    filter: brightness(50%);
+    cursor: pointer;
+}
+.box img{
+    display: block;
+    margin: 5px auto;
+    height: 50vh ;
+    width: 20vw;
+    margin-bottom: 10px;
+    box-shadow:0px 0px 5px rgb(12, 12, 12);
+}
+/* products css */
+/* #products{
+    position: relative;
+}
+#products::before{
+    content: "";
+    background: url("images/contact-us-background.jpg") no-repeat center center/cover;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+#products img{
+    width: 50vw;
+    height: 420px;
+}
+
+/* utility classes */
+.h-primary{
+    width:150px;
+    margin:20px auto;
+    font-size: 3.3rem;
+    margin-top: 35px;
+}
+.h-secondary{
+    margin:20px auto;
+    font-size: 3rem;
+    width: 500px;
+    text-align: center;
+}
+#model img{
+order: 1;
+}
+#model .class{
+    order: 2;
+}
+.productpara{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 20px;
+}
+#products img:hover{
+    filter: brightness(50%);
+    cursor: pointer;
+}
+#caricature{
+    margin-bottom: 100px;
+}
+
+/* contact us */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    background: url("images/contact-us-background.jpg") no-repeat top center/cover;
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* opacity: 1; */
+}
+#contact h1{
+    color: white;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+#contact-box input,
+#contact-box textarea{
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   color: white;
+
+}
+
+/* footer */
+#footer{
+    color: white;
+    background-color: black;
+    padding: 12px 13px;
+    text-align: center;
+}
+
